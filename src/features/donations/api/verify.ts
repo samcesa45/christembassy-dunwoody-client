@@ -1,29 +1,28 @@
 import { api } from '@/lib/api-client';
-import { MutationConfig } from '@/lib/react-query';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { QueryConfig } from '@/lib/react-query';
+import { queryOptions, useQuery } from '@tanstack/react-query';
 
-export const verfiyDonation = ({ reference }: { reference: string }) => {
-  return api.post(`/donations/verify/${reference}`);
+export const getDonationByReference = ({ reference }: { reference: string }) => {
+  return api.get(`/donations/bg-reference/${reference}`);
 };
 
-type UseVerifyDonationOptions = {
-  mutationConfig?: MutationConfig<typeof verfiyDonation>;
-};
-
-export const useVerifyDonation = ({
-  mutationConfig,
-}: UseVerifyDonationOptions = {}) => {
-  const queryClient = useQueryClient();
-  const { onSuccess, ...restConfig } = mutationConfig || {};
-
-  return useMutation({
-    onSuccess: (...args) => {
-      queryClient.invalidateQueries({
-        queryKey: ['donations'],
-      });
-      onSuccess?.(...args);
-    },
-    ...restConfig,
-    mutationFn: verfiyDonation,
+export const getDonationReferenceQueryOptions = (reference: string) => {
+  return queryOptions({
+    queryKey: ['donations', reference],
+    queryFn: () => getDonationByReference({ reference }),
   });
 };
+
+
+type UseDonationReferenceOptions = {
+  reference: string;
+  queryConfig?: QueryConfig<typeof getDonationReferenceQueryOptions>;
+};
+
+export const useDonationByReference = ({ reference, queryConfig }: UseDonationReferenceOptions) => {
+  return useQuery({
+    ...getDonationReferenceQueryOptions(reference),
+    ...queryConfig,
+  });
+};
+

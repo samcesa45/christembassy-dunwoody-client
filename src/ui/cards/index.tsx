@@ -1,6 +1,11 @@
 import Link from 'next/link';
 import React from 'react';
 import img1 from '@/images/christ_embassy3.jpg';
+import img2 from '@/images/christ_embassy2.jpeg';
+import img3 from '@/images/christ_embassy4.jpg';
+import img4 from '@/images/christ_embassy5.jpg';
+import img5 from '@/images/christ_embassy7.jpg';
+import img6 from '@/images/christ_embassy1.jpeg';
 import Image from 'next/image';
 type cardItems = {
   id: number;
@@ -28,7 +33,7 @@ const items = [
   },
   {
     id: 2,
-    images: img1,
+    images: img2,
     title: 'Growing with ISM on PSCDL',
     subtitle: '',
     content:
@@ -40,7 +45,7 @@ const items = [
   },
   {
     id: 3,
-    images: img1,
+    images: img3,
     title: 'Growing with ISM on PSCDL',
     subtitle: '',
     content:
@@ -52,7 +57,7 @@ const items = [
   },
   {
     id: 4,
-    images: img1,
+    images: img4,
     title: 'Growing with ISM on PSCDL',
     subtitle: '',
     content:
@@ -64,7 +69,7 @@ const items = [
   },
   {
     id: 5,
-    images: img1,
+    images: img5,
     title: 'Growing with ISM on PSCDL',
     subtitle: '',
     content:
@@ -76,7 +81,7 @@ const items = [
   },
   {
     id: 6,
-    images: img1,
+    images: img6,
     title: 'Growing with ISM on PSCDL',
     subtitle: '',
     content:
