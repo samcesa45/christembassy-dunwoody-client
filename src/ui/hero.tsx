@@ -9,22 +9,22 @@ const slides: Slide[] = [
     image: heroImg8,
     title: `We Can't Wait To Meet You!`,
     subtitle: `We are excited to welcome you home as part of our church family!`,
-    buttonText: 'Get Started',
-    buttonLink: '#',
+    buttonText: 'Become A Partner',
+    buttonLink: '/donate/partner',
   },
   {
     image: heroImg7,
     title: `We Can't Wait To Meet You!`,
     subtitle: `We are excited to welcome you home as part of our church family!`,
-    buttonText: 'Get Started',
-    buttonLink: '#',
+    buttonText: 'Become A Partner',
+    buttonLink: '/donate/partner',
   },
   {
     image: heroImg1,
     title: `We Can't Wait To Meet You!`,
     subtitle: `We are excited to welcome you home as part of our church family!`,
-    buttonText: 'Get Started',
-    buttonLink: '#',
+    buttonText: 'Become A Partner',
+    buttonLink: '/donate/partner',
   },
 ];
 
