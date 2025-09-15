@@ -3,7 +3,7 @@ import { QueryConfig } from '@/lib/react-query';
 import { queryOptions, useQuery } from '@tanstack/react-query';
 
 export const getDonationByReference = ({ reference }: { reference: string }) => {
-  return api.get(`/donations/bg-reference/${reference}`);
+  return api.get(`/donations/by-reference/${reference}`);
 };
 
 export const getDonationReferenceQueryOptions = (reference: string) => {
