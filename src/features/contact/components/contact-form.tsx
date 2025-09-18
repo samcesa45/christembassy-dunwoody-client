@@ -70,8 +70,8 @@ export default function ContactForm() {
                     type="text"
                     label=""
                     placeholder="Phone"
-                    error={formState.errors['name']}
-                    registration={register('name')}
+                    error={formState.errors['phone']}
+                    registration={register('phone')}
                     className="border-0 border-b-1 border-b-light-gray pl-8 placeholder:text-light-gray focus-visible:placeholder:text-black/80 focus-visible:ring-0 focus-visible:border-b-black/80 hover:border-b-black hover:transition-colors hover:duration-300 rounded-none shadow-[0_15px_15px_-14px_rgb(0_0_0_/_.025)]"
                   />
                 </div>
@@ -81,8 +81,8 @@ export default function ContactForm() {
                     type="email"
                     label=""
                     placeholder="Email Address"
-                    error={formState.errors['name']}
-                    registration={register('name')}
+                    error={formState.errors['email']}
+                    registration={register('email')}
                     className="border-0 border-b-1 border-b-light-gray pl-8 placeholder:text-light-gray focus-visible:placeholder:text-black/80 focus-visible:ring-0 focus-visible:border-b-black/80 hover:border-b-black hover:transition-colors hover:duration-300 rounded-none shadow-[0_15px_15px_-14px_rgb(0_0_0_/_.025)]"
                   />
                 </div>
@@ -92,8 +92,8 @@ export default function ContactForm() {
                     type="text"
                     label=""
                     placeholder="Subject"
-                    error={formState.errors['name']}
-                    registration={register('name')}
+                    error={formState.errors['subject']}
+                    registration={register('subject')}
                     className="border-0 border-b-1 border-b-light-gray pl-8 placeholder:text-light-gray focus-visible:placeholder:text-black/80 focus-visible:ring-0 focus-visible:border-b-black/80 hover:border-b-black hover:transition-colors hover:duration-300 rounded-none shadow-[0_15px_15px_-14px_rgb(0_0_0_/_.025)]"
                   />
                 </div>
