@@ -100,7 +100,6 @@ export const currencies = [
   { code: 'GHS', symbol: '₵', name: 'Ghana Cedis' },
 ];
 
-
 export const categoryTypes = [
   {
     label: 'General Offering',

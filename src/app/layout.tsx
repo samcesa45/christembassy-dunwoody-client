@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Toaster } from 'sonner';
-import { Inter, Poppins, Merriweather } from 'next/font/google';
+import { Inter, Poppins, Merriweather, Kumbh_Sans, Nunito } from 'next/font/google';
 import './globals.css';
 import { ErrorBoundary } from '@/ui/errors/error-boundary';
 import { AppProvider } from './provider';
@@ -21,6 +21,16 @@ const poppins = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700'],
   subsets: ['latin'],
 });
+const kumbhSans = Kumbh_Sans({
+  variable: '--font-kumbhSans',
+  weight: ['100', '200', '300', '400', '500', '600', '700'],
+  subsets: ['latin'],
+});
+const nunito = Nunito({
+  variable: '--font-nunito',
+  weight: ['300', '400', '500', '600', '700'],
+  subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -35,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${merriweather.variable} ${inter.variable} ${poppins.variable} antialiased flex flex-col min-h-full`}
+        className={`${merriweather.variable} ${inter.variable} ${poppins.variable} ${kumbhSans.variable} ${nunito} antialiased flex flex-col min-h-full`}
       >
         <ErrorBoundary>
           <AppProvider>

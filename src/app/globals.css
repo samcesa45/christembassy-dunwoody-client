@@ -12,8 +12,11 @@
   --font-inter: 'Inter', sans-serif;
   --font-poppins: 'Poppins', sans-serif;
   --font-merriweather: 'Merriweather', sans-serif;
+  --font-kumbhSans: 'Kumbh Sans', sans-serif;
+  --font-nunito: 'Nunito', sans-serif;
   --color-gold: var(--header);
   --color-navyblue: #1e3a8a;
+  --color-light-gray: #858689;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,4 +30,54 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.sc_icons .sc_icons_item .sc_icons_item_more_link .link_text {
+  position: relative;
+  margin-right: 0;
+  display: inline-block;
+  vertical-align: middle;
+  text-indent: -110px;
+  visibility: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  -webkit-transition:
+    visibility 0.4s ease,
+    margin-right 0.4s ease-out,
+    text-indent 0.5s ease-out,
+    opacity 0.4s ease;
+  -ms-transition:
+    visibility 0.4s ease,
+    margin-right 0.4s ease-out,
+    text-indent 0.5s ease-out,
+    opacity 0.4s ease;
+  transition:
+    visibility 0.4s ease,
+    margin-right 0.4s ease-out,
+    text-indent 0.5s ease-out,
+    opacity 0.4s ease;
+  will-change: visibility, margin-right, text-indent, opacity;
+}
+
+.sc_icons .sc_icons_item:hover .sc_icons_item_more_link .link_text,
+.sc_icons .sc_icons_item .sc_icons_item_more_link:hover .link_text {
+  opacity: 1;
+  text-indent: 0;
+  margin-right: 6px;
+  visibility: visible;
+  -webkit-transition:
+    visibility 0.4s ease,
+    margin-right 0.3s ease-out,
+    text-indent 0.4s ease-out,
+    opacity 0.4s ease;
+  -ms-transition:
+    visibility 0.4s ease,
+    margin-right 0.3s ease-out,
+    text-indent 0.4s ease-out,
+    opacity 0.4s ease;
+  transition:
+    visibility 0.4s ease,
+    margin-right 0.3s ease-out,
+    text-indent 0.4s ease-out,
+    opacity 0.4s ease;
 }

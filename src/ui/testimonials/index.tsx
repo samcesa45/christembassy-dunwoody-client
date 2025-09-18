@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 type ClientProps = {
   title?: string;
 };
-export default function Testimonials({ title}: ClientProps) {
+export default function Testimonials({ title }: ClientProps) {
   const scrollRef = useRef(null);
   return (
     <section className="py-10 sm:py-35 mx-auto flex w-full max-w-7xl flex-1 flex-col px-4 sm:px-6 lg:px-8">

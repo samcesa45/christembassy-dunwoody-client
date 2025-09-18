@@ -4,36 +4,39 @@ import { useDonationByReference } from '@/features/donations/api/verify';
 import { useSearchParams, useRouter } from 'next/navigation';
 import React, { useEffect } from 'react';
 import { motion } from 'motion/react';
-import { CheckCircle, XCircle, Loader2 } from 'lucide-react';
+import { CheckCircle, XCircle} from 'lucide-react';
 import { Spinner } from '@/ui/spinner';
-
 
 export default function CallbackPage() {
   const router = useRouter();
   const params = useSearchParams();
   const reference = params.get('reference');
-  const getDonationByReference = useDonationByReference({reference} as any);
+  const getDonationByReference = useDonationByReference({ reference } as any);
 
   useEffect(() => {
-    if(getDonationByReference.status === 'success') {
+    if (getDonationByReference.status === 'success') {
       //wait 3s then go home
       const timer = setTimeout(() => router.push('/'), 3000);
       return () => clearTimeout(timer);
     }
 
-    if(getDonationByReference.status === 'error') {
+    if (getDonationByReference.status === 'error') {
       const timer = setTimeout(() => router.push('/donate/partner'), 3000);
       return () => clearTimeout(timer);
     }
-  }, [getDonationByReference,router]);
+  }, [getDonationByReference, router]);
 
   const renderContent = () => {
     if (getDonationByReference.isLoading) {
       return (
         <>
           <Spinner className="h-14 w-14 animate-spin text-navyblue" />
-          <h1 className="text-xl font-semibold mt-4">Verifying your payment...</h1>
-          <p className="text-gray-500 mt-2">Please hold on while we confirm with Paystack.</p>
+          <h1 className="text-xl font-semibold mt-4">
+            Verifying your payment...
+          </h1>
+          <p className="text-gray-500 mt-2">
+            Please hold on while we confirm with Paystack.
+          </p>
         </>
       );
     }
@@ -43,7 +46,9 @@ export default function CallbackPage() {
         <>
           <XCircle className="h-14 w-14 text-red-500" />
           <h1 className="text-xl font-semibold mt-4">Verification failed</h1>
-          <p className="text-gray-500 mt-2">Something went wrong. Please contact support.</p>
+          <p className="text-gray-500 mt-2">
+            Something went wrong. Please contact support.
+          </p>
         </>
       );
     }
@@ -52,12 +57,13 @@ export default function CallbackPage() {
       return (
         <>
           <CheckCircle className="h-14 w-14 text-green-500" />
-          <h1 className="text-2xl font-bold mt-4">Thank you, for your support</h1>
-          <p className="text-gray-600 mt-2">
-            Your donation of 
-            was successful.
+          <h1 className="text-2xl font-bold mt-4">
+            Thank you, for your support
+          </h1>
+          <p className="text-gray-600 mt-2">Your donation of was successful.</p>
+          <p className="text-sm text-gray-400 mt-3">
+            Redirecting you to the homepage...
           </p>
-          <p className="text-sm text-gray-400 mt-3">Redirecting you to the homepage...</p>
         </>
       );
     }

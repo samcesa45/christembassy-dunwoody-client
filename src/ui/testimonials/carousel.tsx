@@ -7,7 +7,7 @@ import { carouselItems } from '@/constants';
 
 export default function Carousels() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
-  const [,setVisibleSlides] = useState<number[]>([]);
+  const [, setVisibleSlides] = useState<number[]>([]);
 
   useEffect(() => {
     if (!emblaApi) return;

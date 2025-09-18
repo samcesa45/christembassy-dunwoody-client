@@ -73,5 +73,3 @@ export type PaymentTransaction = {
   rawResponse: JSON;
   createdAt: string;
 };
-
-
