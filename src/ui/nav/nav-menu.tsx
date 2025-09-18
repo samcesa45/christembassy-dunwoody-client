@@ -74,11 +74,23 @@ export default function NavMenu() {
               </li>
             ) : (
               <li key={link.id}>
-                <Link
+                {/* <Link
                   href={link.url}
                   className={`group inline-flex h-9 w-max items-center justify-center px-4 py-2 text-black text-sm font-inter hover:text-navyblue font-normal transition-colors focus:outline-hidden ${pathname.startsWith(link.url) ? 'text-[#1E3A8A]' : ''}`}
                 >
                   {link.title}
+                </Link> */}
+                <Link
+                  href={link.url}
+                  className={`group relative inline-flex h-9 w-max items-center justify-center px-4 py-2 text-black text-sm font-inter hover:text-navyblue font-normal transition-colors focus:outline-hidden ${pathname.startsWith(link.url) ? 'text-[#1E3A8A]' : ''}  transition duration-300"`}
+                >
+                  <span className="relative inline-block">
+                    {/* text */}
+                    <span className="relative z-10">{link.title}</span>
+
+                    {/* underline */}
+                    <span className="absolute -bottom-0.5 left-0 h-[2px] w-0 bg-navyblue transition-all duration-300 group-hover:w-full"></span>
+                  </span>
                 </Link>
               </li>
             ),

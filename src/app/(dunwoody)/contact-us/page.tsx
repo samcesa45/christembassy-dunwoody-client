@@ -1,10 +1,7 @@
 import ContactForm from '@/features/contact/components/contact-form';
 import InneHero from '@/ui/inner-hero';
 import MapWithMarkers from '@/ui/map-markers';
-import {
-  ArrowRightCircle,
-  ChurchIcon,
-} from 'lucide-react';
+import { ArrowRightCircle, ChurchIcon } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 

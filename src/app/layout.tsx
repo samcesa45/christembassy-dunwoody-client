@@ -1,6 +1,12 @@
 import type { Metadata } from 'next';
 import { Toaster } from 'sonner';
-import { Inter, Poppins, Merriweather, Kumbh_Sans, Nunito } from 'next/font/google';
+import {
+  Inter,
+  Poppins,
+  Merriweather,
+  Kumbh_Sans,
+  Nunito,
+} from 'next/font/google';
 import './globals.css';
 import { ErrorBoundary } from '@/ui/errors/error-boundary';
 import { AppProvider } from './provider';

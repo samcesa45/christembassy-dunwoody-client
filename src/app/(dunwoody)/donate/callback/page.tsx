@@ -4,7 +4,7 @@ import { useDonationByReference } from '@/features/donations/api/verify';
 import { useSearchParams, useRouter } from 'next/navigation';
 import React, { useEffect } from 'react';
 import { motion } from 'motion/react';
-import { CheckCircle, XCircle} from 'lucide-react';
+import { CheckCircle, XCircle } from 'lucide-react';
 import { Spinner } from '@/ui/spinner';
 
 export default function CallbackPage() {

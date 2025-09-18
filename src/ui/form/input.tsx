@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { UseFormRegisterReturn } from 'react-hook-form';
 import { FieldWrapper, FieldWrapperPassThroughProps } from './field-wrapper';
 import { cn } from '@/lib/utils';
@@ -35,7 +35,8 @@ export const DynamicIcon = ({
   color = 'grey',
   className = '',
 }: DynamicIconProps) => {
-  const [IconComponent, setIconComponent] = React.useState<React.ComponentType<any> | null>(null);
+  const [IconComponent, setIconComponent] =
+    React.useState<React.ComponentType<any> | null>(null);
   //Case 1: FontAwesome
   // if (faIcon) {
   //   return <FontAwesomeIcon icon={faIcon} size={typeof size === "string" ? size : undefined} className={className} color={color} />;
@@ -43,24 +44,25 @@ export const DynamicIcon = ({
 
   //Case 2: Other libraries (Lucide, HeroIcons...)
 
-  
   //Lazy import: ensures only the requested icon is bundled
-   React.useEffect(() => {
+  React.useEffect(() => {
     if (!name) return;
 
     import('lucide-react')
-    .then((icons) => {
-      if(icons[name as keyof typeof icons]) {
-        setIconComponent(() => icons[name as keyof typeof icons] as React.ComponentType<any>)
-      } else {
-        console.warn(`Icon "${name}" not found in lucide-react`);
+      .then((icons) => {
+        if (icons[name as keyof typeof icons]) {
+          setIconComponent(
+            () => icons[name as keyof typeof icons] as React.ComponentType<any>,
+          );
+        } else {
+          console.warn(`Icon "${name}" not found in lucide-react`);
+          setIconComponent(null);
+        }
+      })
+      .catch((err) => {
+        console.error('Failed to laod icon:', err);
         setIconComponent(null);
-      }
-    })
-    .catch((err) => {
-      console.error('Failed to laod icon:', err)
-      setIconComponent(null)
-    });
+      });
   }, [name]);
 
   if (!IconComponent) return null;
