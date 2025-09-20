@@ -81,3 +81,27 @@ body {
     text-indent 0.4s ease-out,
     opacity 0.4s ease;
 }
+
+/* .embla__slide {
+  position:absolute;
+  inset:0;
+}
+
+.embla__container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+} */
+
+/* .embla__slide.is-selected img {
+  animation: zoomIn 6s ease forwards;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+} */
