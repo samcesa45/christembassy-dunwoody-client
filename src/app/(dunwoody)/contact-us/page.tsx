@@ -1,9 +1,11 @@
 import ContactForm from '@/features/contact/components/contact-form';
 import InneHero from '@/ui/inner-hero';
 import MapWithMarkers from '@/ui/map-markers';
-import { ArrowRightCircle, ChurchIcon } from 'lucide-react';
+import { ArrowRightCircle } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import churchSilhouette from '@/images/church-clipart-2018-6.png'
 
 export default function ContactUsPage() {
   return (
@@ -15,9 +17,9 @@ export default function ContactUsPage() {
       <div className="py-24 bg-white">
         <div className="grid grid-cols-1 items-center px-8 max-w-7xl mx-auto sm:grid-cols-2 lg:grid-cols-3">
           {/*  */}
-          <div className="mb-4 text-center">
-            <ChurchIcon className="mb-4 text-center mx-auto" />
-            <h3 className="mb-4 font-bold text-xl font-merriweather">
+          <div className="mb-4 text-center group relative">
+            <Image src={churchSilhouette} alt='Church Silhouette' width={200} height={200} className='w-auto h-[100px] mb-4 text-center mx-auto'/>
+            <h3 className="mb-4 font-bold text-xl font-kumbhSans">
               Christ Embassy Dunwoody
             </h3>
             <p className="text-[#858689] font-nunito text-center mx-auto max-w-[200px] text-wrap">
@@ -25,7 +27,7 @@ export default function ContactUsPage() {
             </p>
             <Link
               href="/"
-              className="group relative flex items-center justify-center  overflow-hidden my-4"
+              className="flex items-center justify-center  overflow-hidden my-4"
             >
               <span className="font-semibold text-lg max-w-0 overflow-hidden whitespace-nowrap transition-all duration-500 ease-out group-hover:max-w-xs group-hover:mr-3">
                 Get In Touch
@@ -35,9 +37,9 @@ export default function ContactUsPage() {
           </div>
           {/*  */}
           {/*  */}
-          <div className="mb-4 text-center">
-            <ChurchIcon className="mb-4 text-center mx-auto" />
-            <h3 className="mb-4 font-bold text-xl font-merriweather">
+          <div className="mb-4 text-center group relative">
+            <Image src={churchSilhouette} alt='Church Silhouette' width={300} height={300} className='w-auto h-[100px] mb-4 text-center mx-auto'/>
+            <h3 className="mb-4 font-bold text-xl font-kumbhSans">
               Christ Embassy Dunwoody
             </h3>
             <p className="text-[#858689] font-nunito text-center mx-auto max-w-[200px] text-wrap">
@@ -45,7 +47,7 @@ export default function ContactUsPage() {
             </p>
             <Link
               href="/"
-              className="group relative flex items-center justify-center  overflow-hidden my-4"
+              className="flex items-center justify-center  overflow-hidden my-4"
             >
               <span className="font-semibold text-lg max-w-0 overflow-hidden whitespace-nowrap transition-all duration-500 ease-out group-hover:max-w-xs group-hover:mr-3">
                 Get In Touch
@@ -55,9 +57,9 @@ export default function ContactUsPage() {
           </div>
           {/*  */}
           {/*  */}
-          <div className="mb-4 text-center">
-            <ChurchIcon className="mb-4 text-center mx-auto" />
-            <h3 className="mb-4 font-bold text-xl font-merriweather">
+          <div className="mb-4 text-center group relative">
+            <Image src={churchSilhouette} alt='Church Silhouette' width={300} height={300} className='w-auto h-[100px] mb-4 text-center mx-auto'/>
+            <h3 className="mb-4 font-bold text-xl font-kumbhSans">
               Christ Embassy Dunwoody
             </h3>
             <p className="text-[#858689] font-nunito text-center mx-auto max-w-[200px] text-wrap">
@@ -101,3 +103,4 @@ export default function ContactUsPage() {
     </main>
   );
 }
+
