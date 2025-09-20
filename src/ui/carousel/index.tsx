@@ -67,7 +67,7 @@ export default function Carousel({ slides }: CarouselProps) {
                   <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[96px] lg:leading-[92px] lg:text-nowrap font-kumbhSans font-extrabold text-white">
                     {slide.title}
                   </h1>
-                  <p className="text-base font-bold font-nunito text-white">
+                  <p className="text-[21px] leading-6 my-4 text-center max-w-sm sm:max-w-full font-normal font-kumbhSans text-white">
                     {slide.subtitle}
                   </p>
                   {slide.buttonText && (

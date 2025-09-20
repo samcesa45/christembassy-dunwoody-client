@@ -8,14 +8,14 @@ const slides: Slide[] = [
   {
     image: heroImg8,
     title: `Welcome to Church!`,
-    subtitle: `We are excited to welcome you home as part of our church family!`,
+    subtitle: `Connect and Grow Together`,
     buttonText: 'Become A Partner',
     buttonLink: '/donate/partner',
   },
   {
     image: heroImg7,
     title: `Welcome to Church!`,
-    subtitle: `We are excited to welcome you home as part of our church family!`,
+    subtitle: `Connect and Grow Together`,
     buttonText: 'Become A Partner',
     buttonLink: '/donate/partner',
   },

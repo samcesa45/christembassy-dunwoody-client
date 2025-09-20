@@ -55,7 +55,7 @@ export default function RootLayout({
       >
         <ErrorBoundary>
           <AppProvider>
-            <div className="flex min-h-full flex-1 flex-col bg-[#f5f5f5] ">
+            <div className="flex min-h-full flex-1 flex-col bg-[#f5f5f5] overflow-hidden">
               {children}
             </div>
             <Toaster position="top-center" offset={10} />
