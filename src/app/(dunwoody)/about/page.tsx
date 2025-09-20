@@ -1,9 +1,14 @@
+import InneHero from '@/ui/inner-hero';
 import React from 'react';
 
 export default function AboutPage() {
   return (
-    <main className="max-w-7xl px-4 py-10 min-h-screen">
-      <p className="text-3xl text-center">No content yet</p>
+    // <main className="max-w-7xl px-4 py-10 min-h-screen">
+      <main className="">
+      <InneHero
+        title="Who We Are"
+        para="We believe in the deity of Christ. (John 1: 1-4; John 10:30; Hebrews 1:1-5)."
+      />
     </main>
   );
 }
