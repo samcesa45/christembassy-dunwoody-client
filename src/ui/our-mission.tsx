@@ -15,7 +15,7 @@ export default function OurMission() {
         <div className="relative z-10 lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center">
           {/* Left: Tabs */}
           <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-8 lg:order-2">
-            <h2 className="text-2xl text-[#1E3A8A] font-bold sm:text-3xl dark:text-neutral-200 font-merriweather">
+            <h2 className="text-2xl text-[#1E3A8A] font-bold sm:text-3xl dark:text-neutral-200 font-kumbhSans">
               Our Mission And Vision
             </h2>
 

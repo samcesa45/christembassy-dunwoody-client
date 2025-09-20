@@ -10,7 +10,7 @@ export default function ClientSection() {
   return (
     <section className="mt-10 sm:mt-35.5 mx-auto flex w-full max-w-7xl flex-1 flex-col px-4 pb-6 pt-2 sm:px-6 lg:px-8">
       <motion.div viewport={{ root: scrollRef }} {...fadeInUp}>
-        <motion.h2 className="text-brand-black mx-auto text-center font-merriweather text-[1.8rem] font-bold sm:text-[2.63rem] sm:leading-17.5">
+        <motion.h2 className="text-brand-black mx-auto text-center font-kumbhSans text-[1.8rem] font-bold sm:text-[2.63rem] sm:leading-17.5">
           Meet Our Esteemed{' '}
           <motion.span className="relative w-fit">
             Clientele

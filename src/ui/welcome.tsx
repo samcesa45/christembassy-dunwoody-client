@@ -8,15 +8,15 @@ export default function Welcome() {
       <motion.h1
         //   {...fadeInUp}
         //   viewport={{ root: scrollRef }}
-        //   className="font-merriweather font-bold text-[2.5rem] mb-4  text-center  text-[#1E3A8A]"
-        className="text-[#1E3A8A]  text-center mx-auto  font-merriweather font-bold text-[1.8rem] sm:text-[2.63rem] sm:leading-17.5"
+        //   className="font-kumbhSans font-bold text-[2.5rem] mb-4  text-center  text-[#1E3A8A]"
+        className="text-[#1E3A8A]  text-center mx-auto  font-kumbhSans font-bold text-[1.8rem] sm:text-[2.63rem] sm:leading-17.5"
       >
         {'Welcome to Christ Embassy Dunwoody'}{' '}
       </motion.h1>
-      <h4 className="font-merriweather font-bold text-[1.5rem]  text-center">
+      <h4 className="font-kumbhSans font-bold text-[1.5rem]  text-center">
         {'Service Times: Sundays at 8am, 9:30am, & 11am'}
       </h4>
-      <h4 className="font-merriweather font-bold text-[1.5rem]  text-center">
+      <h4 className="font-kumbhSans font-bold text-[1.5rem]  text-center">
         {'Location: 3010 NE 14th Street, Ocala, FL 34470'}
       </h4>
       <motion.p

@@ -15,7 +15,7 @@ export default function Testimonials({ title }: ClientProps) {
         viewport={{ root: scrollRef }}
         transition={{ delay: 0.3, duration: 0.8 }}
       >
-        <motion.h2 className="text-[#1E3A8A]  text-center mx-auto  font-merriweather font-bold text-[1.8rem] sm:text-[2.63rem] sm:leading-17.5">
+        <motion.h2 className="text-[#1E3A8A]  text-center mx-auto  font-kumbhSans font-bold text-[1.8rem] sm:text-[2.63rem] sm:leading-17.5">
           Testimonials From Our Members
         </motion.h2>
         <motion.p className="font-inter max-w-[526px] mt-6 mx-auto font-normal text-[1rem] leading-7 text-center text-brand-tertiary">

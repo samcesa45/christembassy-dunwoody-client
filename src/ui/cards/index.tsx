@@ -115,11 +115,11 @@ const CardItem = ({ items }: ItemsProps) => {
       {items.map((item) => (
         <div
           key={item.id}
-          className="group flex flex-col h-full bg-white border border-gray-200 shadow-2xs rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70"
+          className="group cursor-pointer relative flex flex-col h-full bg-white border border-gray-200 shadow-2xs rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70"
         >
-          <div className="h-auto flex flex-col justify-center items-center  rounded-t-xl">
+          <div className="overflow-hidden h-auto flex flex-col justify-center items-center  rounded-t-xl">
             <Image
-              className="h-auto w-full object-contain"
+              className="h-auto w-full object-contain  duration-500 ease-in transition-opacity group-hover:scale-105"
               src={item.images}
               alt="dunwoodylogo"
               width={0}

@@ -11,7 +11,7 @@ type Props = {
 export default function ClientCardHeader({ title }: Props) {
   return (
     <motion.h2
-      className="text-brand-black  mx-auto text-center font-merriweather text-[1.8rem] font-bold sm:text-[2.63rem] sm:leading-17.5"
+      className="text-brand-black  mx-auto text-center font-kumbhSans text-[1.8rem] font-bold sm:text-[2.63rem] sm:leading-17.5"
       {...fadeInUp}
       viewport={{ once: true }}
     >

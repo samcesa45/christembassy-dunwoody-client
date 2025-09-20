@@ -11,7 +11,7 @@ export default function Home() {
       <Welcome />
       <OurMission />
       <div className="text-center">
-        <h2 className="text-[#1E3A8A]  text-center mx-auto  font-merriweather font-bold text-[1.8rem] sm:text-[2.63rem] sm:leading-17.5">
+        <h2 className="text-[#1E3A8A]  text-center mx-auto  font-kumbhSans font-bold text-[1.8rem] sm:text-[2.63rem] sm:leading-17.5">
           Explore Our Ministry Materials
         </h2>
         <Cards />
