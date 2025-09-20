@@ -34,7 +34,7 @@ export default function ContactForm() {
     );
   };
   return (
-    <div className="bg-white p-[70px_70px_80px_70px]  lg:p-[70px_70px_80px_70px] mx-auto max-w-[700px]">
+    <div className="bg-white p-[35px_25px_35px_25px]  md:p-[70px_70px_80px_70px] mx-auto max-w-[700px]">
       <Form
         className=""
         schema={contactFormSchema}
