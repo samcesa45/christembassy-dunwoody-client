@@ -1,8 +1,7 @@
-import { ArrowRightCircle} from 'lucide-react';
+import { ArrowRightCircle } from 'lucide-react';
 import Link from 'next/link';
 import React, { SVGProps } from 'react';
-import { FaUsers } from "react-icons/fa";
-
+import { FaUsers } from 'react-icons/fa';
 
 export default function WhatWeDo() {
   return (
@@ -27,7 +26,7 @@ export default function WhatWeDo() {
               <h3 className="font-kumbhSans font-semibold text-[#28282E] text-[24px] -tracking-[0.2px] mb-[14px] leading-7 md:text-[1.556em] md:leading-[1.214em] ">
                 Our Community
               </h3>
-              <p className='font-nunito text-[16px] leading-[1.65em] text-[#858689]'>
+              <p className="font-nunito text-[16px] leading-[1.65em] text-[#858689]">
                 {`At Christ Embassy Dunwoody, we are more than a church—we are a family. Our community is a place of love, support, and growth where everyone is valued and encouraged to live out their faith with joy.`}
               </p>
               <Link
@@ -44,12 +43,12 @@ export default function WhatWeDo() {
             {/* card2 start */}
             <div className="group relative bg-white px-8 pb-8 flex flex-col items-center shadow-[0_3px_60px_rgba(0_0_0_.04)]">
               <div className="relative inline-block text-[4.4em] mb-4  md:mb-8 size-auto leading-[1em] mt-[0.8em] border-none rounded-none">
-              <FaUsers  className="w-[100px] h-[80px] mx-auto text-navyblue group-hover:text-black transition-colors cursor-pointer" />
+                <FaUsers className="w-[100px] h-[80px] mx-auto text-navyblue group-hover:text-black transition-colors cursor-pointer" />
               </div>
               <h3 className="font-kumbhSans font-semibold text-[#28282E] text-[24px] -tracking-[0.2px] mb-[14px] leading-7 md:text-[1.556em] md:leading-[1.214em] ">
                 Church Mission
               </h3>
-              <p className='font-nunito text-[16px] leading-[1.65em] text-[#858689]'>
+              <p className="font-nunito text-[16px] leading-[1.65em] text-[#858689]">
                 {`Our mission is to bring the message of God's love to all, transforming lives through the Word and the power of the Holy Spirit. We are committed to raising passionate, purpose-driven believers who impact their world for Christ.`}
               </p>
               <Link
@@ -71,7 +70,7 @@ export default function WhatWeDo() {
               <h3 className="font-kumbhSans font-semibold text-[#28282E] text-[24px] -tracking-[0.2px] mb-[14px] leading-7 md:text-[1.556em] md:leading-[1.214em] ">
                 Our Mentors
               </h3>
-              <p className='font-nunito text-[16px] leading-[1.65em] text-[#858689]'>
+              <p className="font-nunito text-[16px] leading-[1.65em] text-[#858689]">
                 {`We are blessed with spiritual leaders who guide us with wisdom, prayer, and love. Their mentorship helps us grow in faith, character, and purpose as we fulfill God’s calling together.`}
               </p>
               <Link
@@ -132,8 +131,8 @@ export const OpenBook = (props: SVGProps<SVGSVGElement>) => {
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 122.88 96.44"
-       width="80"
-        height="100"
+      width="80"
+      height="100"
       {...props}
     >
       <title>open-book</title>

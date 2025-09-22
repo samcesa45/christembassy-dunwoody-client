@@ -3,6 +3,9 @@ import heroImg3 from '@/images/christ_embassy3.jpg';
 import heroImg4 from '@/images/christ_embassy4.jpg';
 import praiseImg1 from '@/images/praise1.jpg';
 import praiseImg2 from '@/images/praise2.jpg';
+import img1 from '@/images/img1.jpg';
+import img2 from '@/images/img2.jpg';
+import img3 from '@/images/img3.jpg';
 export type NavLink = {
   id: string;
   title: string;
@@ -158,5 +161,26 @@ export const TABS = [
                        rather than let us tell you about it.come check it out for
                        yourself!`,
     image: praiseImg1,
+  },
+];
+
+export const cardItems = [
+  {
+    quote: `I love attending this church! I enjoy coming together for worship and events with our big believing family. I have felt my personal growth and strength in serving people making this world a better place.`,
+    name: 'Nick Jones',
+    location: 'Boston',
+    image: img1,
+  },
+  {
+    quote: `Our Grace-church is really wonderful and amazing. The practice of giving is awesome and brings results. I ask everyone who isn't indifferent to donate and take part! God bless you all!`,
+    name: 'Sarah Williams',
+    location: 'New York',
+    image: img2,
+  },
+  {
+    quote: `My husband and I come here every Sunday. The church’s atmosphere is nice, inspirational and devout. Many good and kind people pray here. I recommend joining us with your entire family.`,
+    name: 'Michael Lee',
+    location: 'Chicago',
+    image: img3,
   },
 ];
