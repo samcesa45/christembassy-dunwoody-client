@@ -5,7 +5,7 @@ import { ArrowRightCircle } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import churchSilhouette from '@/images/church-clipart-2018-6.png'
+import churchSilhouette from '@/images/church-clipart-2018-6.png';
 
 export default function ContactUsPage() {
   return (
@@ -18,7 +18,13 @@ export default function ContactUsPage() {
         <div className="grid grid-cols-1 items-center px-8 max-w-7xl mx-auto sm:grid-cols-2 lg:grid-cols-3">
           {/*  */}
           <div className="mb-4 text-center group relative">
-            <Image src={churchSilhouette} alt='Church Silhouette' width={200} height={200} className='w-auto h-[100px] mb-4 text-center mx-auto'/>
+            <Image
+              src={churchSilhouette}
+              alt="Church Silhouette"
+              width={200}
+              height={200}
+              className="w-auto h-[100px] mb-4 text-center mx-auto"
+            />
             <h3 className="mb-4 font-bold text-xl font-kumbhSans">
               Christ Embassy Dunwoody
             </h3>
@@ -38,7 +44,13 @@ export default function ContactUsPage() {
           {/*  */}
           {/*  */}
           <div className="mb-4 text-center group relative">
-            <Image src={churchSilhouette} alt='Church Silhouette' width={300} height={300} className='w-auto h-[100px] mb-4 text-center mx-auto'/>
+            <Image
+              src={churchSilhouette}
+              alt="Church Silhouette"
+              width={300}
+              height={300}
+              className="w-auto h-[100px] mb-4 text-center mx-auto"
+            />
             <h3 className="mb-4 font-bold text-xl font-kumbhSans">
               Christ Embassy Dunwoody
             </h3>
@@ -58,7 +70,13 @@ export default function ContactUsPage() {
           {/*  */}
           {/*  */}
           <div className="mb-4 text-center group relative">
-            <Image src={churchSilhouette} alt='Church Silhouette' width={300} height={300} className='w-auto h-[100px] mb-4 text-center mx-auto'/>
+            <Image
+              src={churchSilhouette}
+              alt="Church Silhouette"
+              width={300}
+              height={300}
+              className="w-auto h-[100px] mb-4 text-center mx-auto"
+            />
             <h3 className="mb-4 font-bold text-xl font-kumbhSans">
               Christ Embassy Dunwoody
             </h3>
@@ -103,4 +121,3 @@ export default function ContactUsPage() {
     </main>
   );
 }
-

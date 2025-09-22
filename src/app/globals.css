@@ -4,6 +4,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --header: #ffd11a;
+  --detail-medium-contrast: #191919;
 }
 
 @theme inline {
@@ -17,6 +18,8 @@
   --color-gold: var(--header);
   --color-navyblue: #1e3a8a;
   --color-light-gray: #858689;
+  --color-detail-medium-contrast: var(--detail-medium-contrast);
+  --color-sky-blue: #f0f4f7;
 }
 
 @media (prefers-color-scheme: dark) {
