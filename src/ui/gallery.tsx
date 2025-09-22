@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React from 'react';
 import masonry1 from '@/images/masonry1.jpg';
 import masonry2 from '@/images/masonry2.jpg';
@@ -7,15 +6,17 @@ import masonry4 from '@/images/masonry4.jpg';
 import masonry5 from '@/images/masonry5.jpg';
 import masonry6 from '@/images/masonry6.jpg';
 import masonry7 from '@/images/masonry7.jpg';
-const masonryImages = [
-    masonry1,
-    masonry2,
-    masonry3,
-    masonry4,
-    masonry5,
-    masonry6,
-    masonry7,
-  ];
+import MasonryGallery from './masonry-gallery';
+
+const items = [
+  { src: masonry1, cols: 1 },
+  { src: masonry2, cols: 2 },
+  { src: masonry3, cols: 1 },
+  { src: masonry4, cols: 1, rows: 5 },
+  { src: masonry5, cols: 1,rows:2 },
+  { src: masonry6, cols: 1 },
+  { src: masonry7, cols: 2, rows:3 },
+];
 export default function Gallery() {
   return (
     <main className="bg-white">
@@ -30,18 +31,12 @@ export default function Gallery() {
         </div>
         <div>
           {/*Masonry Grid*/}
-          <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-          {masonryImages.map((img, i) => (
-            <Image
-              key={i}
-              priority
-              src={img}
-              alt={`Gallery image ${i}`}
-              width={500}
-              className="w-full h-auto rounded-lg break-inside-avoid"
-            />
-          ))}
-        </div>
+          <MasonryGallery
+            items={items}
+            defaultCols={4}
+            gap={28}
+            rowHeight={100}
+          />
           {/* Masonry Grid */}
         </div>
       </div>
