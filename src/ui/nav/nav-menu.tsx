@@ -82,7 +82,7 @@ export default function NavMenu() {
                 </Link> */}
                 <Link
                   href={link.url}
-                  className={`group relative inline-flex h-9 w-max items-center justify-center px-4 py-2 text-black text-sm font-inter hover:text-navyblue font-normal transition-colors focus:outline-hidden ${pathname.startsWith(link.url) ? 'text-[#1E3A8A]' : ''}  transition duration-300"`}
+                  className={`group relative inline-flex h-9 w-max items-center justify-center px-4 py-2 text-black text-sm font-inter hover:text-navyblue font-normal transition-colors focus:outline-hidden ${pathname === link.url ? 'text-navyblue' : ''}  transition duration-300"`}
                 >
                   <span className="relative inline-block">
                     {/* text */}

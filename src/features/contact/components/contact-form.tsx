@@ -99,12 +99,13 @@ export default function ContactForm() {
                 </div>
               </div>
               <Button
+                isLoading={createContact.isPending}
                 icon={
                   <Mail className="absolute ml-2 left-0 top-2 translate-y-1/2" />
                 }
                 className="relative uppercase flex items-center justify-center px-10 h-16! mt-8 bg-navyblue/90 hover:bg-navyblue font-kumbhSans  text-white border-none"
               >
-                Get In Touch
+                {createContact.isPending ? 'Submitting' : 'Get In Touch'}
               </Button>
             </>
           );

@@ -172,7 +172,7 @@ export const cardItems = [
     image: img1,
   },
   {
-    quote: `Our Grace-church is really wonderful and amazing. The practice of giving is awesome and brings results. I ask everyone who isn't indifferent to donate and take part! God bless you all!`,
+    quote: `ChristEmbassy dunwoody is really wonderful and amazing. The practice of giving is awesome and brings results. I ask everyone who isn't indifferent to donate and take part! God bless you all!`,
     name: 'Sarah Williams',
     location: 'New York',
     image: img2,

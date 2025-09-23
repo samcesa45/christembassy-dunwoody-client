@@ -52,7 +52,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         {...props}
       >
-        {isLoading && <>loader...</>}
+        {isLoading && <span className='sr-only'>loading...</span>}
         <span className="">{children}</span>
         {!isLoading && icon && <span className="">{icon}</span>}
       </Comp>
