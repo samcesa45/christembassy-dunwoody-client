@@ -13,9 +13,9 @@ const items = [
   { src: masonry2, cols: 2 },
   { src: masonry3, cols: 1 },
   { src: masonry4, cols: 1, rows: 5 },
-  { src: masonry5, cols: 1,rows:2 },
+  { src: masonry5, cols: 1, rows: 2 },
   { src: masonry6, cols: 1 },
-  { src: masonry7, cols: 2, rows:3 },
+  { src: masonry7, cols: 2, rows: 3 },
 ];
 export default function Gallery() {
   return (

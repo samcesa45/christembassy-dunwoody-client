@@ -20,6 +20,7 @@
   --color-light-gray: #858689;
   --color-detail-medium-contrast: var(--detail-medium-contrast);
   --color-sky-blue: #f0f4f7;
+  --color-main-bg: #f0f4f7;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -108,3 +109,65 @@ body {
     transform: scale(1.1);
   }
 } */
+
+/* globals.css */
+.fc .fc-toolbar-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.fc .fc-daygrid-day {
+  border-color: #e5e7eb;
+}
+
+.fc .fc-daygrid-day-frame {
+  padding: 8px;
+}
+
+.fc .fc-button {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent !important;
+  border: 1px solid #28282e !important;
+  color: #111827 !important;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 50% !important;
+  /* padding: 6px 12px !important; */
+  height: 40px !important;
+  margin: 0 10px;
+}
+
+.fc .fc-button.fc-today-button {
+  background: #1e3a8a !important;
+  color: white !important;
+  border-radius: 0 !important;
+  opacity: 1;
+  border: 1px solid #1e3a8a !important;
+}
+
+/* Hide the default time column in list views */
+/* .fc .fc-list-event-time {
+  display: none !important;
+} */
+
+.fc-theme-standard .fc-list {
+  border: none;
+}
+.fc-list-event td:hover {
+  background-color: transparent !important;
+}
+
+.fc-list-event td {
+  padding: 40px 0px 40px 20px !important;
+}
+.fc-list-event-dot {
+  display: none !important;
+}
+
+.fc-list-table tbody:hover {
+  background-color: transparent !important;
+}
+.fc-theme-standard .fc-list-day-cushion {
+  background: #f0f4f7;
+}

@@ -15,10 +15,10 @@ type Props = {
 };
 
 const BREAKPOINTS = {
-    sm: 640,
-    md:900,
-    lg:1280
-}
+  sm: 640,
+  md: 900,
+  lg: 1280,
+};
 export default function MasonryGallery({
   items,
   defaultCols = 4,
@@ -30,19 +30,19 @@ export default function MasonryGallery({
   const [spans, setSpans] = useState<Record<number, number>>({});
   const [cols, setCols] = useState<number>(defaultCols);
 
-  const updateCols =()=> {
+  const updateCols = () => {
     const w = window.innerWidth;
     if (w < BREAKPOINTS.sm) setCols(1);
     else if (w < BREAKPOINTS.md) setCols(2);
     else if (w < BREAKPOINTS.lg) setCols(3);
     else setCols(defaultCols);
-  }
+  };
   //responsive columns
   useEffect(() => {
     updateCols();
     window.addEventListener('resize', updateCols);
     return () => window.removeEventListener('resize', updateCols);
-  }, [defaultCols]);
+  }, [defaultCols,updateCols]);
 
   //compute span for a single index
   const computeSpan = (index: number) => {
@@ -84,15 +84,18 @@ export default function MasonryGallery({
 
     if (containerRef.current) ro.observe(containerRef.current);
     return () => ro.disconnect();
-  }, [cols, gap, rowHeight]);
+  }, [cols, gap, rowHeight,computeSpan]);
 
   //memoize the grid container's style object to prevent re-creation on every render
-  const gridContainerStyle = useMemo(() => ({
-    display: 'grid',
-        gridTemplateColumns: `repeat(${cols}, 1fr)`,
-        gridAutoRows: `${rowHeight}px`,
-        gap: `${gap}px`,
-  }),[cols, gap, rowHeight])
+  const gridContainerStyle = useMemo(
+    () => ({
+      display: 'grid',
+      gridTemplateColumns: `repeat(${cols}, 1fr)`,
+      gridAutoRows: `${rowHeight}px`,
+      gap: `${gap}px`,
+    }),
+    [cols, gap, rowHeight],
+  );
 
   //call this from next/image onLoadingComplete
   const handleLoad = (
@@ -107,9 +110,7 @@ export default function MasonryGallery({
   };
   return (
     <div className="w-full" ref={containerRef}>
-      <div
-        style={gridContainerStyle}
-      >
+      <div style={gridContainerStyle}>
         {items.map((item, i) => {
           const colSpan = Math.min(item.cols ?? 1, cols);
           //if item.rows is provided , use it directly, otherwise fallback to auto span
@@ -137,7 +138,7 @@ export default function MasonryGallery({
                 className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                 onLoadingComplete={(meta) => handleLoad(i, meta as any)}
                 placeholder="blur"
-                loading='lazy'
+                loading="lazy"
               />
             </div>
           );

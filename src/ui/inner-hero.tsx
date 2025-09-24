@@ -6,7 +6,7 @@ type Props = {
 };
 export default function InneHero({ title, para }: Props) {
   return (
-    <section className="bg-blend-overlay flex flex-col items-center justify-center max-h-[400px] bg-[#F0F4F7] h-screen w-full px-4">
+    <section className="bg-blend-overlay flex flex-col items-center justify-center max-h-[250px] md:max-h-[400px] bg-main-bg h-screen w-full px-4">
       <div className="text-center">
         <h1 className="text-navyblue mb-4 font-kumbhSans font-bold text-[1.8rem] sm:text-[2.63rem] sm:leading-[100%] md:text-[57px] md:leading-[61px] tracking-normal">
           {title}

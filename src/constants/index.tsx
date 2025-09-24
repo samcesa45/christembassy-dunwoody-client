@@ -25,6 +25,24 @@ export const navLinks: NavLink[] = [
     url: '/about',
   },
   {
+    id: 'events',
+    title: 'Events',
+    url: '/events',
+    hasChildren: true,
+    children: [
+      {
+        id: 'events list',
+        title: 'Events List',
+        url: '/events/list',
+      },
+      {
+        id: 'event calendar',
+        title: 'Events Calendar',
+        url: '/events/calendar',
+      },
+    ],
+  },
+  {
     id: 'live-tv',
     title: 'Live TV',
     url: '/live-tv',

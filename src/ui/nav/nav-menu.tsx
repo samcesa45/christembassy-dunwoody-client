@@ -5,10 +5,11 @@ import React, { useState } from 'react';
 import NavMobileMenu from './nav-mobile-menu';
 import { navLinks } from '@/constants';
 import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover';
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 import { AnimatePresence, motion } from 'motion/react';
 import Image from 'next/image';
 // import DesktopNav from './desktop-navbar';
@@ -17,7 +18,7 @@ import { ChevronDown } from 'lucide-react';
 export default function NavMenu() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+  const [openPopoverId, setOpenPopoverId] = useState<string | null>(null);
   return (
     <>
       {/* Desktop Nav */}
@@ -25,26 +26,29 @@ export default function NavMenu() {
         <ul className="flex items-center justify-center gap-x-1">
           {navLinks.map((link) =>
             link.hasChildren ? (
-              <li key={link.id} className="relative z-[100]">
-                <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
-                  <PopoverTrigger
-                    asChild
-                    onMouseEnter={() => setIsPopoverOpen(true)}
-                    onMouseLeave={() => setIsPopoverOpen(false)}
-                  >
+              <li key={link.id} className="relative">
+                <DropdownMenu
+                  open={openPopoverId === link.id}
+                  onOpenChange={(open) =>
+                    setOpenPopoverId(open ? link.id : null)
+                  }
+                >
+                  <DropdownMenuTrigger asChild>
                     <button
-                      className={`group inline-flex h-9 w-max items-center justify-center px-4 py-2 text-black text-sm font-inter hover:text-brand-primary font-normal transition-colors focus:outline-none ${
-                        pathname.startsWith(link.url) ? 'text-navyblue' : ''
+                      className={`group inline-flex h-9  items-center justify-center px-4 py-2 text-sm font-inter font-normal transition-colors focus:outline-none ${
+                        pathname.startsWith(link.url)
+                          ? 'text-navyblue'
+                          : 'text-black hover:text-brand-primary '
                       }`}
                     >
                       {link.title}
                       <ChevronDown className="ml-1 size-4 transition-transform group-data-[state=open]:rotate-180" />
                     </button>
-                  </PopoverTrigger>
+                  </DropdownMenuTrigger>
                   <AnimatePresence>
-                    <PopoverContent
-                      onMouseEnter={() => setIsPopoverOpen(true)} // Keep open when hovering over content
-                      onMouseLeave={() => setIsPopoverOpen(false)}
+                    <DropdownMenuContent
+                      onMouseEnter={() => setOpenPopoverId(link.id)}
+                      onMouseLeave={() => setOpenPopoverId(null)}
                       className="w-48 p-2 shadow-lg border-none bg-white"
                     >
                       <motion.ul
@@ -54,7 +58,7 @@ export default function NavMenu() {
                         transition={{ duration: 0.2 }}
                       >
                         {link.children?.map((child) => (
-                          <li key={child.id}>
+                          <DropdownMenuItem key={child.id} asChild>
                             <Link
                               href={child.url}
                               className={`block rounded-md px-3 py-2 text-sm transition-colors ${
@@ -65,12 +69,12 @@ export default function NavMenu() {
                             >
                               {child.title}
                             </Link>
-                          </li>
+                          </DropdownMenuItem>
                         ))}
                       </motion.ul>
-                    </PopoverContent>
+                    </DropdownMenuContent>
                   </AnimatePresence>
-                </Popover>
+                </DropdownMenu>
               </li>
             ) : (
               <li key={link.id}>

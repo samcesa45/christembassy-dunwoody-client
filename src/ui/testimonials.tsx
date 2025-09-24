@@ -2,7 +2,6 @@
 import React from 'react';
 import { IoMdQuote } from 'react-icons/io';
 import Image, { StaticImageData } from 'next/image';
-import img1 from '@/images/img1.jpg';
 import { motion } from 'motion/react';
 import { cardItems } from '@/constants';
 export default function Testimonials() {

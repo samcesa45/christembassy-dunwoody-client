@@ -37,3 +37,31 @@ export const formatErrors = (error: any) => {
 
   return 'An unexpected error occurred.';
 };
+
+export const formatDateRange = (start: string | Date, end: string | Date) => {
+  const dateOptions: Intl.DateTimeFormatOptions = {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  };
+
+  const timeOptions: Intl.DateTimeFormatOptions = {
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true,
+  };
+
+  const startDate = new Date(start);
+  const endDate = new Date(end);
+
+  const startStr =
+    new Intl.DateTimeFormat('en-US', dateOptions).format(startDate) +
+    ' @ ' +
+    new Intl.DateTimeFormat('en-US', timeOptions).format(startDate);
+  const endStr =
+    new Intl.DateTimeFormat('en-US', dateOptions).format(endDate) +
+    ' @ ' +
+    new Intl.DateTimeFormat('en-US', timeOptions).format(endDate);
+
+  return `${startStr} - ${endStr}`;
+};
